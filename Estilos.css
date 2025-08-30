@@ -1,0 +1,216 @@
+/* ==================== ESTILOS GENERALES ==================== */
+body {
+  margin: 0; /* Quita márgenes por defecto */
+  padding: 0;
+  font-family: "Georgia", serif; /* Fuente principal */
+  font-size: 18px;
+  line-height: 1.6;
+  background: #EBD0C7;
+  color: #333;
+}
+
+/* ==================== MENÚ SUPERIOR ==================== */
+nav {
+  background-color: #6f4e37;
+  padding: 8px 0;
+}
+
+nav ul {
+  list-style: none; /* Quita viñetas */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Los pone en fila */
+  justify-content: center; /* Centrado */
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 18px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif; /* menú más juvenil */
+  font-size: 14px; /* letra más chiquita */
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #6f4e37; /* Marrón oscuro al pasar el mouse */
+}
+
+/* ==================== BANNER ==================== */
+.banner {
+  background: url("IMG/banner.png") no-repeat center center/cover; /* Imagen del banner */
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Texto un poco abajo */
+  color: white;
+  text-align: center;
+  padding-top: 80px; /* Baja el título */
+  box-sizing: border-box;
+}
+
+.banner h1 {
+  font-size: 3.5em;
+  font-family: "Rage Italic", cursive; /* Fuente artística */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* Sombra */
+}
+
+/* ==================== SECCIONES GENERALES ==================== */
+section {
+  padding: 60px 15%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2.5em;
+  font-family: "Georgia", serif;
+  color: #6f4e37; /* Marrón oscuro */
+  border-bottom: 3px solid #d8c3a5; /* Línea decorativa */
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+/* ==================== IMÁGENES ==================== */
+img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+}
+
+/* ==================== LÍNEA DEL TIEMPO ==================== */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 25px; /* línea centrada con los puntos */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #c19a6b; /* color de la línea */
+}
+
+.timeline li {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 60px; /* espacio entre el texto y la línea */
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: #f4e1c1; /* color de fondo del círculo */
+  border: 3px solid #a05a2c; /* color del borde */
+  border-radius: 50%;
+}
+
+/* ==================== NUEVAS SECCIONES ==================== */
+#territorios-economia, #educacion-salud, #resumen{
+  background-color: #f4f1ec; /* Fondo similar a la línea del tiempo */
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#territorios-economia h2, #educacion-salud h2 {
+  font-size: 2em;
+  color: #6f4e37;
+  border-bottom: 3px solid #d8c3a5; /* Línea decorativa */
+  padding-bottom: 10px;
+}
+
+#territorios-economia p, #educacion-salud p {
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* ==================== CONTEXTUALIZACIÓN EN TARJETAS ==================== */
+.contexto-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contexto-grid .card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contexto-grid img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.contexto-grid .card:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Sombra al pasar el ratón */
+}
+
+/* ==================== TABLA ESTADÍSTICAS ==================== */
+.tabla-estadisticas {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.tabla-estadisticas th,
+.tabla-estadisticas td {
+  border: 1px solid #6f4e37;
+  padding: 10px;
+}
+
+.tabla-estadisticas th {
+  background: #d8c3a5;
+  color: #333;
+}
+
+/* ==================== DATOS CURIOSOS ==================== */
+#curiosidades ul {
+  list-style: square;
+  margin-left: 40px;
+  font-size: 1.1em;
+}
+
+/* ==================== FUENTES ==================== */
+footer {
+  background-color: #d8c3a5;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: "Georgia", cursive, sans-serif;
+}
